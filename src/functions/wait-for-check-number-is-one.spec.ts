@@ -22,18 +22,18 @@ describe('waitForCheckNumberIsOne', () => {
     // );
   });
 
-  test('not 1 -> false', () => {
+  test('not 1 -> false', async () => {
     const target = 2;
 
-    const result = waitForCheckNumberIsOne(target);
+    const result = await waitForCheckNumberIsOne(target);
 
     expect(result).toEqual(false);
   });
 
-  test('1 -> true', () => {
+  test('1 -> true', async () => {
     const target = 1;
 
-    const result = waitForCheckNumberIsOne(target);
+    const result = await waitForCheckNumberIsOne(target);
 
     expect(result).toEqual(true);
   });
